@@ -51,44 +51,47 @@ const Dayforecastphone = ({data4,setdata4,dayweather,unit,setunit,fahrenheit}) =
 
                 
                 return(
-                    <div key={item.dt} className='flex justify-center items-center'>
-                    <div className='card h-[100%] flex justify-between items-center  '>
-                        <div className='day flex items-center justify-items-start text-[#CBD5E1] text-[0.8rem] md:text-[1rem] font-medium'>
-                        {index==0 && <span className='w-[1rem] '>Today</span>}
-                        {index!=0 && <span className='w-[1rem] '>{dayName.slice(0,3)}</span>}
+                    <>
+                        <div key={item.dt} className='flex justify-center items-center'>
+                        <div className='card h-[100%] flex justify-between items-center  '>
+                            <div className='day flex items-center justify-items-start text-[#CBD5E1] text-[0.8rem] md:text-[1rem] font-medium'>
+                            {index==0 && <span className='w-[1rem] '>Today</span>}
+                            {index!=0 && <span className='w-[1rem] '>{dayName.slice(0,3)}</span>}
+                            
+                            </div>
+                            
+
+                            <div className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium flex items-center justify-center gap-4'>
+                            <img className='w-[20%] flex justify-start' src={icons[item?.weather?.[0].icon]} alt="" />
+                            <span className='w-[20%]'>{item?.weather?.[0].main}</span>
+                            </div>
+                            <div className="temp">
+                                {unit=="c" &&
+                                <>
+                                    <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium'>{Math.round(item?.temp?.max)}°</span>
+                                    
+                                    <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] '>/{Math.round(item?.temp?.min)}°</span> 
+                                </>
+                                }
+                                {unit=="F" &&
+                                <>
+                                    {/* {Math.round((item?.main?.temp * 9) / 5 + 32)} */}
+                                    <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium '>{Math.round((item?.temp?.max*9) / 5+32)}°</span>
+                                    <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] '>/{Math.round((item?.temp?.min)*9 / 5 +32)}°</span> 
+                                </>
+                                }
+                                {/* <span className='font-medium text-[1.2rem] '>{Math.round(item?.temp?.max)}°</span> */}
+
+                                {/* <span className='text-[#CBD5E1] text-[1.2rem] '>/{Math.round(item?.temp?.min)}°</span>  */}
+
+                            </div>
+
+                        </div>
+
                         
                         </div>
-                        
-
-                        <div className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium flex items-center justify-center gap-4'>
-                        <img className='w-[20%] flex justify-start' src={icons[item?.weather?.[0].icon]} alt="" />
-                        <span className='w-[20%]'>{item?.weather?.[0].main}</span>
-                        </div>
-                        <div className="temp">
-                            {unit=="c" &&
-                            <>
-                                <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium'>{Math.round(item?.temp?.max)}°</span>
-                                
-                                <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] '>/{Math.round(item?.temp?.min)}°</span> 
-                            </>
-                            }
-                            {unit=="F" &&
-                            <>
-                                {/* {Math.round((item?.main?.temp * 9) / 5 + 32)} */}
-                                <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] font-medium '>{Math.round((item?.temp?.max*9) / 5+32)}°</span>
-                                <span className='text-[1rem] md:text-[1rem] lg:text-[1.2rem] '>/{Math.round((item?.temp?.min)*9 / 5 +32)}°</span> 
-                            </>
-                            }
-                            {/* <span className='font-medium text-[1.2rem] '>{Math.round(item?.temp?.max)}°</span> */}
-
-                            {/* <span className='text-[#CBD5E1] text-[1.2rem] '>/{Math.round(item?.temp?.min)}°</span>  */}
-
-                        </div>
-
-                    </div>
-
-                    
-                    </div>
+                        <div className="border-b border-white/10 last:border-0 w-full"></div>
+                    </>
                 )
                 })}
             </div>

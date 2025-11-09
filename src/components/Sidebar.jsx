@@ -16,19 +16,19 @@ const Sidebar = () => {
         </div>
         
       
-        <NavLink to="/Weatha">
+        <NavLink className={({isActive})=> isActive? "text-white":""} to="/Weatha">
           <div className="weatherhome flex flex-col justify-center items-center md:gap-1 lg:gap-2">
             
             <img className='w-[1.5rem] hover:fill-white' src={weather_home} alt="weather logo" />
-            <span className='md:text-[0.5rem] lg:text-[0.7rem] hover:text-white'>Weather</span>
+            <span className='sm:text-[0.5rem] md:text-[0.5rem] lg:text-[0.7rem] hover:text-white hover:md:text-[0.6rem] hover:lg:text-[0.8rem] transition-all duration-200 ease-in-out'>Weather</span>
           </div>
         </NavLink>
 
-        <NavLink to="/map">
+        <NavLink className={({isActive})=> isActive? "text-white":""} to="/map">
           <div className="umbrella flex flex-col justify-center items-center md:gap-1 lg:gap-2">
             
             <img className='w-[1.5rem]' src={map} alt="umbrella logo" />
-            <span className='md:text-[0.5rem] lg:text-[0.7rem] hover:text-white'>Map</span>
+            <span className='sm:text-[0.5rem] md:text-[0.5rem] lg:text-[0.7rem] hover:text-white hover:md:text-[0.6rem] hover:lg:text-[0.8rem] transition-all duration-200 ease-in-out'>Map</span>
           </div>
         </NavLink>
 
