@@ -24,7 +24,7 @@ const Airconditions = ({data,data2,lat,setlat,lon,setlon,data3,setdata3,airquali
 
 
   return (
-    <div className='h-auto sm:h-[20%] md:h-[25%] lg:h-[30%] w-[95%] px-4 py-3 md:p-4 lg:p-5 bg-[#222d40]/60 rounded-4xl hover:h-[29%] hover:w-[96%] hover:bg-[#222d40]/70 transition-all duration-200 ease-in-out bg-[#222d40]/70 backdrop-blur-md border border-white/10 flex flex-col'>
+    <div className='h-auto sm:h-[20%] md:h-[25%] lg:h-[30%] w-[95%] px-4 py-3 md:px-4 md:px-3 lg:px-5 lg:py-4 bg-[#222d40]/60 rounded-4xl hover:h-[29%] hover:w-[96%] hover:bg-[#222d40]/70 transition-all duration-200 ease-in-out bg-[#222d40]/70 backdrop-blur-md border border-white/10 flex flex-col'>
       
       <div className="heading text-[#CBD5E1] text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] font-semibold ">AIR CONDITIONS</div>
 

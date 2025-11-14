@@ -39,13 +39,13 @@ const Dayforecast = ({data4,setdata4,dayweather,unit,setunit,fahrenheit}) => {
   }
 
   return (
-    <div className='flex flex-col hidden sm:block w-[31.5%] h-[100%] px-4 py-3 md:p-4 lg:p-5 bg-[#222d40]/60 rounded-4xl hover:h-[101%] hover:w-[33%] transition-all duration-200 ease-in-out bg-[#222d40]/70 backdrop-blur-md border border-white/10'>
-      <div className='text-[1.4rem] font-semibold h-[5%]'>
+    <div className='flex flex-col hidden sm:block w-[31.5%] h-[100%] px-4 py-3 md:px-4 md:px-3 lg:px-5 lg:py-4 bg-[#222d40]/60 rounded-4xl hover:h-[101%] hover:w-[33%] transition-all duration-200 ease-in-out bg-[#222d40]/70 backdrop-blur-md border border-white/10'>
+      <div className='text-[1.4rem] font-semibold h-[5%] flex items-start'>
         <span className='text-[#CBD5E1] mr-8 text-[0.8rem] md:text-[0.9rem] lg:text-[1rem]'>7-DAY FORECAST</span>
 
       </div>
 
-      <div className='h-[95%] px-4 flex flex-col justify-around items-center'>
+      <div className='h-[95%] px-4 flex flex-col justify-between items-start'>
 
         {data4?.list?.map((item,index)=>{
           const timestamp = item.dt;       // e.g., 1762410600
@@ -56,7 +56,7 @@ const Dayforecast = ({data4,setdata4,dayweather,unit,setunit,fahrenheit}) => {
           return(
             <>
               <div key={item.dt} className='flex justify-center items-center'>
-                <div className='card h-[100%] flex justify-between items-center  '>
+                <div key={item.dt} className='card h-[100%] flex items-center '>
                   <div className='day flex items-center justify-items-start text-[1.2rem] text-[#CBD5E1]'>
                     {index==0 && <span className='w-[2.4rem] '>Today</span>}
                     {index!=0 && <span className='w-[2.4rem] '>{dayName.slice(0,3)}</span>}

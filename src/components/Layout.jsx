@@ -2,6 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import bg from '../assets/bg.jpg'
+import sunbg from '../assets/sunbg.jpg'
+import cloudbg from '../assets/cloudbg.jpg'
 import Footer from "./Footer";
 import Aqipage from "./Aqipage"
 

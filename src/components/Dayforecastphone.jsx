@@ -37,7 +37,7 @@ const Dayforecastphone = ({data4,setdata4,dayweather,unit,setunit,fahrenheit}) =
     }
     return (
         <div className='flex flex-col h-auto sm:hidden w-[95%] px-4 py-3 md:p-4 lg:p-5 bg-[#222d40]/60 rounded-4xl  bg-[#222d40]/70 backdrop-blur-md border border-white/10'>
-            <div className='text-[1.4rem] font-semibold h-[5%]'>
+            <div className='text-[1.4rem] font-semibold h-[5%] flex items-start'>
                 <span className='text-[#CBD5E1] mr-8 text-[0.8rem] md:text-[0.9rem] lg:text-[1rem]'>7-DAY FORECAST</span>
 
             </div>
